@@ -1,11 +1,13 @@
 /* main.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* GLOBAL RESETS */
+@theme {
+  --font-sans: 'Inter', sans-serif;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     /* Support both light and dark mode backgrounds naturally */
     @apply bg-white dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen;
     transition: background-color 0.3s ease, color 0.3s ease;

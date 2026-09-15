@@ -25,7 +25,7 @@ router.post('/discord/callback', async (req: Request, res: Response) => {
     try {
         const discordUser = await authService.handleDiscordLogin(code);
         const token = authService.generateToken(discordUser);
-
+        
         // Expose user basics required by the frontend
         res.json({
             success: true,
