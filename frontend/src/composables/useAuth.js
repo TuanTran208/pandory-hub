@@ -27,7 +27,7 @@ if (token.value) {
 export function useAuth() {
     const isAuthenticated = computed(() => !!user.value);
     const isOwner = computed(() => user.value?.isOwner || false);
-
+    console.log('isOwner', isOwner);
     const login = (jwtToken, userData) => {
         token.value = jwtToken;
         user.value = userData;
